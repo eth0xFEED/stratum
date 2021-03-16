@@ -276,6 +276,8 @@ class NoOffloadHost(Host):
             cmd = "/sbin/ethtool --offload %s %s off" \
                   % (self.defaultIntf(), off)
             self.cmd(cmd)
+        cmd = "sysctl net.ipv6.conf.%s.disable_ipv6=1" % (self.defaultIntf())
+        self.cmd(cmd)
         return r
 
 
