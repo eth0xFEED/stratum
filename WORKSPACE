@@ -98,6 +98,7 @@ gazelle_dependencies(go_sdk = "go_sdk")
 
 load("@io_bazel_rules_go//tests:grpc_repos.bzl", "grpc_dependencies")
 grpc_dependencies()
+# load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_binary")
 
 # ---------------------------------------------------------------------------
 #       Load CDLang dependencies.

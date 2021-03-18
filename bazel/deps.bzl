@@ -163,6 +163,7 @@ def stratum_deps():
         remote_workspace(
             name = "com_github_openconfig_hercules",
             remote = "https://github.com/openconfig/hercules",
+            #  sha256 = "476b8f39b20de744c47d9e9e5117ef898826e28bc46aa5e5b9b485cca734e3da",
             commit = "cd48feeaaa54426df561d8c961d18d344365998b",
             build_file = "@//bazel:external/hercules.BUILD",
         )

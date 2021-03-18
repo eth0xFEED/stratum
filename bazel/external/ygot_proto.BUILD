@@ -39,3 +39,15 @@ cc_proto_library(
     name = "yext_cc_proto",
     deps = [":yext_proto"]
 )
+
+# load("@rules_proto//proto:defs.bzl", "proto_library")
+# load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
+# go_proto_library(
+#     name = "ywrapper_go_proto",
+#     protos = [":ywrapper_proto"]
+# )
+
+# go_proto_library(
+#     name = "yext_go_proto",
+#     protos = [":yext_proto"]
+# )

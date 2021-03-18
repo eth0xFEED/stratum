@@ -4,6 +4,8 @@
 licenses(["notice"])  # Apache v2
 
 load("@com_github_stratum_stratum//bazel/rules:yang_to_proto_rule.bzl", "yang_to_proto")
+# load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
+
 package(
     default_visibility = [ "//visibility:public" ],
 )
@@ -39,6 +41,7 @@ yang_to_proto(
     ],
     pkg_name = "openconfig",
     exclude_modules = ["ietf-interfaces"],
+    # base_import_path = "github.com/stratum/stratum"
 )
 
 proto_library(
@@ -58,3 +61,11 @@ cc_proto_library(
     name = "openconfig_cc_proto",
     deps = [":openconfig_proto"]
 )
+
+# load("@rules_proto//proto:defs.bzl", "proto_library")
+# load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
+# go_proto_library(
+#     name = "openconfig_go_proto",
+#     protos = [":openconfig_proto"],
+#     importpath = "github.com/stratum/go/openconfig"
+# )
